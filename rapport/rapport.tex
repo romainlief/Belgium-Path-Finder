@@ -667,7 +667,7 @@ En somme, en assemblant nos deux optimisations, nous obtenons une complexité to
   \caption{Graphique du temps d'exécution en fonction de l'heure de départ.}
   \label{fig:graphique_traffique}
 \end{figure}
-De par ce graphe, nous pouvons voir que le temps d'exécution de l'algorithme est relativement constant jusqu'à 16 heures, puis grâce au \emph{Starting criterion},
+De part ce graphe, nous pouvons voir que le temps d'exécution de l'algorithme est relativement constant jusqu'à 16 heures, puis grâce au \emph{Starting criterion},
 l'algorithme devient de plus en plus rapide. En effet, à partir de 16 heures, il y a moins de connexions et il arrive a chaque fois à trouver le chemin optimal en mois d'une seconde.
 Nous pouvons aussi parler du \emph{Stopping criterion}, qui lui permet de ne pas parcourir toutes les connexions et donc de ne pas perdre de temps à chercher des connexions inutiles.
 Bien que nous ne puissions pas le voir sur le graphe, il est tout de même présent et permet de réduire le temps d'exécution de l'algorithme.
@@ -773,7 +773,7 @@ plus proches voisins adaptée pour des données de hautes dimensions. Dans notre
 alternatives plus intéressantes comme par exemple le \emph{R-Tree}, un arbre équilibré de recherche spatiale permettant une recherche plus rapide \cite{RTreedoc}.
 
 \subsection{Le choix de l'algorithme}
-Bien que le \emph{Connection Scan Algorithm} soit rapide et simple à implémenter, nous avons constaté qu'il est peu adapté à la prise en compte de critères personnalisés autres que 
+Bien que le \emph{Connexion Scan Algorithm} soit rapide et simple à implémenter, nous avons constaté qu'il est peu adapté à la prise en compte de critères personnalisés autres que 
 l'heure (comme le type de transport préféré). L'algorithme montre donc des limites en termes de flexibilité et de généricité.
 
 Nous avons envisagé une piste consistant à ne construire que les connexions correspondant aux contraintes de l'utilisateur. Par exemple, si un utilisateur souhaite éviter les bus, 
@@ -783,7 +783,7 @@ ne souhaitant pas marcher longtemps.
 Nous n'avons pas poursuivi cette piste car celle-ci impliquait une modification au niveau de l'initialisation des données avec le point focal du projet étant l'aspect algorithmique.
 Nous avons donc jugé cela non pertinent.
 
-Afin de répondre à cet problématique, nous avons fait usage de \emph{flags} contenus en tant qu'attributs dans la classe \emph{PathFinder}. Ces \emph{flags} sont des booléens permettant
+Afin de répondre à cette problématique, nous avons fait usage de \emph{flags} contenus en tant qu'attributs dans la classe \emph{PathFinder}. Ces \emph{flags} sont des booléens permettant
 d'exclure certains types de connexions directement durant l'exécution de l'algorithme. L'utilisateur peut donc choisir s'il ne souhaite pas prendre le bus, le tram ou autres par exemple.
 
 Malheureusement, cette solution ne répond pas à toutes les situations. Illustrons ceci par un exemple:
